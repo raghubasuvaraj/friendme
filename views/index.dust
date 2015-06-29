@@ -1,0 +1,31 @@
+{>layout/}
+{<content}
+<div class="instructions" ng-hide="submitted">
+    <h2>Send a text with 2 Twitter Handles to <strong><a href="sms:{twilioPhoneNumber}">{twilioPhoneNumber}</a></strong> to see if the two people are compatible</h2>
+    <h3>-or-</h3>
+    <h2>Type in 2 Twitter Handles below</h2>
+</div>
+<div class="app">
+    <div class="row">
+        <div class="col-md-1"> </div>
+        <div class="col-md-5">
+            <img class="appLogo" src="{app.logo}" />
+        </div>
+        <div class="col-md-5">
+            <h2>{app.name}</h2>
+            <h3>{app.description}</h3>
+            <h4>{app.repository}</h4>
+        </div>
+        <div class="col-md-1"> </div>
+    </div>
+    <hr class="divider"> </hr>
+    <div class="row">
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+            <div ng-if="component == 'analyze'" ng-include="'/partials/analyze.html'"></div>
+            <div ng-if="component == 'history'" ng-include="'/partials/history.html'"></div>
+        </div>
+        <div class="col-md-1"> </div>
+    </div>
+</div>
+{/content}

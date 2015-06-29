@@ -1,0 +1,94 @@
+body {
+    background-color: #2D3A42;
+    font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+.navbar-bluemix {
+     background-color: #26343f;
+     border-bottom: 1px solid rgba(122, 137, 145, 0.3);
+}
+
+.navbar-bluemix .navbar-brand span {
+    margin-left: 5px;
+}
+
+.navbar-bluemix .navbar-brand {
+    color: #fff;
+}
+
+.navbar-bluemix .navbar-nav > li > a {
+    color: #b3b3b3;
+    text-transform: uppercase;
+}
+
+.navbar-bluemix .navbar-nav .selected {
+    border-bottom: 4px solid #00b299;
+}
+
+.logo-grey {
+    background-image: url("/images/sprite.png");
+    background-position: -5px -6826px;
+    width: 32px;
+    height: 32px;
+}
+
+.container {
+    margin-top: 50px;
+    color: #94a3ab;
+}
+
+.content {
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.app img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.app h4 {
+    color: #94A3AB;
+}
+
+.app button {
+    background-color: #00B299;
+    border: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.app button:hover {
+    background-color: #01cdb0;
+    color: #fff;
+}
+
+.nav .seperator {
+    border-left: 1px solid rgba(122, 137, 145, 0.3);
+}
+
+.appLogo {
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+.appLogo:hover {
+    box-shadow: 0 0 10px rgba(35, 31, 32, 0.4);
+    z-index: 99;
+}
+
+.deployment .status img {
+    margin-top: 15px;
+}
+
+.user-box {
+    text-align: center;
+}
+
+.instructions h2, .instructions h3 {
+    text-align: center;
+}

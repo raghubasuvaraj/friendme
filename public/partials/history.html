@@ -1,0 +1,34 @@
+<div class="history" ng-controller="HistoryController">
+    <div class="row" ng-repeat="item in comparisons.info">
+        <div class="col-md-6">
+            <div class="col-md-2">
+                <div class="user-img">
+                    <img src="{{ item.user1.profileImage }}">
+                </div>
+                <div>{{ item.user1.name }}</div>
+                <div>{{ item.user1.handle }}</div>
+            </div>
+            <div class="col-md-10">
+                <h4>Top 5 personality traits for {{ item.user1.handle }}</h4>
+                <ul>
+                    <li ng-repeat="item in item.user1Traits|limitTo:5">{{ item.name }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2">
+                <div class="user-img">
+                    <img src="{{ item.user2.profileImage }}">
+                </div>
+                <div>{{ item.user2.name }}</div>
+                <div>{{ item.user2.handle }}</div>
+            </div>
+            <div class="col-md-10">
+                <h4>Top 5 personality traits for {{ item.user2.handle }}</h4>
+                <ul>
+                    <li ng-repeat="item in item.user2Traits|limitTo:5">{{ item.name }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

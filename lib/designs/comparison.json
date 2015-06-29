@@ -1,0 +1,9 @@
+{
+    "_id": "_design/comparison_1",
+    "language": "javascript",
+    "views": {
+        "all": {
+            "map": "function (doc) { if (doc.type === 'comparison') { emit(doc.users, doc); } }"
+        }
+    }
+}

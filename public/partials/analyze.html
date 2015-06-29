@@ -1,0 +1,55 @@
+<form role="form" ng-controller="AnalyzeController">
+    <div class="form-group" ng-hide="submitted">
+        <label for="user1">Twitter Handle 1</label>
+        <input type="text" class="form-control" name="user1" placeholder="Twitter Handle 1" ng-model="user1" />
+        <label for="user2">Twitter Handle 2</label>
+        <input type="text" class="form-control" name="user2" placeholder="Twitter Handle 2" ng-model="user2" />
+    </div>
+    <div class="row" ng-hide="submitted">
+        <hr class="divider"> </hr>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-lg" ng-disabled="submitted" ng-click="compare()">{{ submitButtonText || "Compare!" }}</button>
+        </div>
+    </div>
+    <div class="submitted" ng-show="submitted && !finished">
+        <div class="row status">
+            <div class="col-md-11">
+                <h3>Comparing {{ user1 }} and {{ user2 }}...</h3>
+            </div>
+            <div class="col-md-1">
+                <img src="/images/loading.gif" />
+            </div>
+        </div>
+    </div>
+    <div class="finished" ng-show="finished && !error">
+        <div class="row status">
+            <div class="col-md-12">
+                <h3>{{ user1 }} and {{ user2 }} share {{ inCommonTraits }} out of the top 5 personality traits</h3>
+            </div>
+            <div class="col-md-6">
+                <h4>Top 5 personality traits for {{ user1 }}</h4>
+                <ul>
+                    <li ng-repeat="item in user1Traits|limitTo:5">{{ item.name }}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Top 5 personality traits for {{ user2 }}</h4>
+                <ul>
+                    <li ng-repeat="item in user2Traits|limitTo:5">{{ item.name }}</li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-primary" ng-click="reset()">Do Another</button>
+        </div>
+    </div>
+    <div class="error" ng-show="finished && error">
+        <div class="row status">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    <div><strong>Oh snap!</strong> Change a few things up and try submitting again.</div>
+                    <div>{{ errorMessage }}</div>
+                    <button type="button" class="btn btn-primary" ng-click="reset()">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
