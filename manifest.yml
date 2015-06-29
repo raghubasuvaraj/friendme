@@ -1,0 +1,16 @@
+---
+declared-services:
+  personality-insights-friendme:
+    label: personality_insights
+    plan: IBM Watson Personality Insights Monthly Plan
+  friendme-db:
+    label: cloudantNoSQLDB
+    plan: Shared
+applications:
+- name: friendme
+  command: node lib/app.js
+  path: .
+  memory: 256m
+  services:
+  - personality-insights-friendme
+  - friendme-db
