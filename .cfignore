@@ -8,5 +8,5 @@ pids
 *.seed
 
 npm-debug.log
-node_modules/
+node_modules
 bower_components/
